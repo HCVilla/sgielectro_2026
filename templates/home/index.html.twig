@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard - SGI Electro{% endblock %}
+
+{% block body %}
+<!-- Navbar con Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand font-weight-bold" href="{{ path('app_home') }}">SGI Electro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ path('app_home') }}">Inicio</a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center text-white">
+        <span class="me-3">
+            Usuario: <strong>{{ app.user.userIdentifier }}</strong>
+        </span>
+        <a href="{{ path('app_logout') }}" class="btn btn-outline-danger btn-sm">Cerrar Sesión</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenido del Dashboard -->
+<div class="container mt-4">
+    <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+      <div class="container-fluid py-3">
+        <h1 class="display-5 fw-bold">Bienvenido al Panel de Control</h1>
+        <p class="col-md-8 fs-4">Has ingresado correctamente al sistema SGI Electro.</p>
+      </div>
+    </div>
+</div>
+{% endblock %}

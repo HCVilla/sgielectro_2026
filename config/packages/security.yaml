@@ -41,8 +41,14 @@ security:
 
     # Note: Only the *first* matching rule is applied
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        # Permitir acceso público explícito al login
+        - { path: ^/login$, roles: PUBLIC_ACCESS }
+
+        # Restringir las rutas de administración a usuarios con ROLE_ADMIN
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+        # Requerir autenticación para el resto de la aplicación
+        - { path: ^/, roles: ROLE_USER }
 
 when@test:
     security:
