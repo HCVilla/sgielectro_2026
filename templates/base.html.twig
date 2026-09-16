@@ -13,21 +13,22 @@
         {% block javascripts %}{% endblock %}
     </head>
     <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0 flex-grow-1 d-flex flex-column">
+        <!-- Main Content (se expande para empujar el footer al fondo) -->
+        <main class="flex-shrink-0 flex-grow-1">
             {% block body %}{% endblock %}
         </main>
 
         <!-- Footer Global -->
-        <footer class="footer mt-auto py-3 bg-dark text-white-50 border-top">
+        <footer class="footer mt-auto py-2 bg-dark text-white-50 border-top">
             <div class="container-fluid px-4">
                 <div class="row align-items-center text-center text-md-start">
-                    <div class="col-md-6 mb-2 mb-md-0">
+                    <div class="col-md-6">
                         <span class="small">
                             Desarrollado por 
                             <strong class="text-white">Villanueva Cesar - Ingeniero en Sistemas</strong>
                         </span>
                     </div>
-                    <div class="col-md-5 text-md-end">
+                    <div class="col-md-6 text-md-end">
                         <span class="small me-3">&copy; {{ 'now'|date('Y') }} SGI Electro</span>
                         <span class="badge bg-secondary">v1.0</span>
                     </div>
