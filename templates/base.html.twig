@@ -13,19 +13,25 @@
         {% block javascripts %}{% endblock %}
     </head>
     <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
+        <main class="flex-shrink-0 flex-grow-1 d-flex flex-column">
             {% block body %}{% endblock %}
         </main>
 
         <!-- Footer Global -->
         <footer class="footer mt-auto py-3 bg-dark text-white-50 border-top">
-            <div class="container text-center text-md-between d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <span class="small mb-2 mb-md-0">
-                    &copy; {{ 'now'|date('Y') }} <strong>SGI Electro</strong>. Todos los derechos reservados.
-                </span>
-                <span class="small">
-                    Desarrollado por <a href="#" class="text-white text-decoration-none fw-semibold">Tu Nombre o Equipo de Desarrollo</a>
-                </span>
+            <div class="container-fluid px-4">
+                <div class="row align-items-center text-center text-md-start">
+                    <div class="col-md-6 mb-2 mb-md-0">
+                        <span class="small">
+                            Desarrollado por 
+                            <strong class="text-white">Villanueva Cesar - Ingeniero en Sistemas</strong>
+                        </span>
+                    </div>
+                    <div class="col-md-5 text-md-end">
+                        <span class="small me-3">&copy; {{ 'now'|date('Y') }} SGI Electro</span>
+                        <span class="badge bg-secondary">v1.0</span>
+                    </div>
+                </div>
             </div>
         </footer>
 
